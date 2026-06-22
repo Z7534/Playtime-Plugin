@@ -1,0 +1,20 @@
+name: Playtime
+version: '1.0'
+main: de.Z7534.playtime.Playtime
+api-version: '26.2'
+description: Playtime!
+author: Z7534
+
+commands:
+  playtime:
+    description: Zeigt die Spielzeit an
+    usage: /playtime [player]
+    permission: playtime.use
+
+permissions:
+  playtime.use:
+    description: Erlaubt das Abfragen der eigenen Spielzeit
+    default: true
+  playtime.other:
+    description: Erlaubt das Abfragen der Spielzeit anderer Spieler
+    default: op

@@ -1,0 +1,63 @@
+# ========================================
+# Playtime Plugin Configuration
+# by Z7534
+# ========================================
+
+# MariaDB Datenbank-Einstellungen
+database:
+  host: "localhost"
+  port: 3306
+  database: "minecraft"
+  username: "root"
+  password: "password"
+  # Connection Pool Einstellungen
+  pool:
+    maximum-pool-size: 10
+    minimum-idle: 2
+    connection-timeout: 30000
+    idle-timeout: 600000
+    max-lifetime: 1800000
+
+# ========================================
+# Nachrichten
+# ========================================
+# Verfügbare Farbcodes: &0-&9, &a-&f, &k, &l, &m, &n, &o, &r
+# Hex-Farben: &#RRGGBB (z.B. &#FF5555)
+#
+# Verfügbare Variablen:
+#   %player%     - Name des Spielers
+#   %days%       - Tage gespielt
+#   %hours%      - Stunden (0-23)
+#   %minutes%    - Minuten (0-59)
+#   %seconds%    - Sekunden (0-59)
+#   %total_hours% - Gesamte Stunden (inkl. Tage)
+#   %total_minutes% - Gesamte Minuten
+# ========================================
+
+messages:
+  # Prefix für alle Nachrichten
+  prefix: "&8[&6Playtime&8] "
+
+  # Eigene Spielzeit
+  own-playtime: "&7Deine Spielzeit: &a%days% &7Tage, &a%hours% &7Stunden, &a%minutes% &7Minuten"
+
+  # Spielzeit eines anderen Spielers
+  other-playtime: "&7Spielzeit von &e%player%&7: &a%days% &7Tage, &a%hours% &7Stunden, &a%minutes% &7Minuten"
+
+  # Spieler wurde nicht gefunden
+  player-not-found: "&cSpieler &e%player% &cwurde nicht gefunden!"
+
+  # Keine Berechtigung
+  no-permission: "&cDu hast keine Berechtigung für diesen Befehl!"
+
+  # Keine Berechtigung für andere Spieler
+  no-permission-other: "&cDu hast keine Berechtigung, die Spielzeit anderer Spieler anzuzeigen!"
+
+  # Befehl nur für Spieler
+  player-only: "&cDieser Befehl kann nur von Spielern ausgeführt werden!"
+
+  # Datenbankfehler
+  database-error: "&cEin Datenbankfehler ist aufgetreten!"
+
+  # Spieler hat noch keine Spielzeit
+  no-playtime: "&7%player% hat noch keine Spielzeit!"
